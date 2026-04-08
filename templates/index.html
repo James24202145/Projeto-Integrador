@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMapa - Início</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Mantendo os mesmos estilos da pagina de importancia */
+        .hero-section { background: #e9ecef; padding: 60px 0; border-bottom: 5px solid #0d6efd; }
+        .icon-card { transition: transform 0.3s; cursor: pointer; text-decoration: none; color: inherit; }
+        .icon-card:hover { transform: scale(1.05); }
+        .icon-img { width: 80px; height: 80px; object-fit: contain; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="/">♻️ EcoMapa</a>
+            <div class="d-flex">
+                <a href="/importancia" class="btn btn-outline-light btn-sm">Por que reciclar?</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Descarte de Lixo Eletrônico</h1>
+            <p class="lead">Selecione o material abaixo para encontrar o ponto de coleta mais próximo.</p>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4">
+                <a href="/busca?tipo=Eletroeletrônicos" class="icon-card">
+                    <div class="card h-100 shadow-sm border-0 text-center p-4">
+                        <img src="{{ url_for('static', filename='img/eletronicos.png') }}" class="icon-img mx-auto mb-3" alt="Eletrônicos">
+                        <h5 class="card-title">Eletroeletrônicos</h5>
+                        <p class="text-muted small">Celulares, computadores e periféricos.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="/busca?tipo=Pilhas" class="icon-card">
+                    <div class="card h-100 shadow-sm border-0 text-center p-4">
+                        <img src="{{ url_for('static', filename='img/baterias.png') }}" class="icon-img mx-auto mb-3" alt="Pilhas">
+                        <h5 class="card-title">Pilhas e Baterias</h5>
+                        <p class="text-muted small">Pilhas portáteis e baterias de eletrônicos.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="/busca?tipo=Eletrodomesticos" class="icon-card">
+                    <div class="card h-100 shadow-sm border-0 text-center p-4">
+                        <img src="{{ url_for('static', filename='img/eletrodomesticos.png') }}" class="icon-img mx-auto mb-3" alt="Eletrodomesticos">
+                        <h5 class="card-title">Eletrodomésticos</h5>
+                        <p class="text-muted small">Micro-ondas, cafeteiras e batedeiras.</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="mt-5 p-4 bg-info bg-opacity-10 rounded shadow-sm border-start border-info border-5 d-flex align-items-center">
+            <div class="me-4 display-6">♻️</div>
+            <div>
+                <h4>Já conhece o impacto do seu descarte?</h4>
+                <p class="mb-0">Entender o ciclo da logística reversa ajuda a preservar o meio ambiente.
+                   <a href="/importancia" class="fw-bold text-info-emphasis">Saiba mais sobre a importância do descarte correto.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 text-center text-muted border-top">
+        <p>&copy; 2026 Projeto Integrador - Gestão de Resíduos Eletrônicos</p>
+    </footer>
+
+</body>
+</html>

@@ -2,3 +2,5 @@ venv/
 *.db
 __pycache__/
 .env
+*.pdf
+*.docx
