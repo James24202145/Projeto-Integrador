@@ -5,26 +5,29 @@ def cadastrar_pontos():
     pontos = [
         PontoColeta(
             nome="Leroy Merlin - Raposo Tavares",
-            endereco="Rod. Raposo Tavares, Km 14,5 - Jardim Maria Luiza",
+            endereco="Rod. Raposo Tavares, Km 14,5",
+            bairro="Jardim Maria Luiza",
             cidade="São Paulo",
             cep="05576-100",
-            tipo_material="Eletroeletrônicos",
+            tipo_material="Eletroeletrônicos;Pilhas e Baterias;Eletrodomésticos",
             latitude=-23.585955, longitude=-46.751633  # Coordenadas aproximadas
         ),
         PontoColeta(
             nome="Descomplica Butantã",
-            endereco="R. Dr. Ulpiano da Costa Manso, 201 - Peri Peri",
+            endereco="R. Dr. Ulpiano da Costa Manso, 201",
+            bairro="Peri Peri",
             cidade="São Paulo",
             cep="05538-010",
-            tipo_material="Eletroeletrônicos",
+            tipo_material="Eletroeletrônicos;Pilhas e Baterias;Eletrodomésticos",
             latitude=-23.588096, longitude=-46.737987
         ),
         PontoColeta(
             nome="Makro - Butantã",
-            endereco="R. Carlos Lisdegno Carlucci, 519 - Jardim Peri Peri",
+            endereco="R. Carlos Lisdegno Carlucci, 519",
+            bairro="Peri Peri",
             cidade="São Paulo",
             cep="05536-000",
-            tipo_material="Eletroeletrônicos",
+            tipo_material="Eletroeletrônicos;Pilhas e Baterias;Eletrodomésticos",
             latitude=-23.590733, longitude=-46.738243
         )
     ]

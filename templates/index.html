@@ -6,8 +6,23 @@
     <title>EcoMapa - Início</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Mantendo os mesmos estilos da pagina de importancia */
-        .hero-section { background: #e9ecef; padding: 60px 0; border-bottom: 5px solid #0d6efd; }
+        .hero-section {
+        /* Caminho para a sua imagem na pasta static */
+        background-image: url("{{ url_for('static', filename='img/leaf.avif') }}");
+
+        /* Configurações para a imagem se repetir como um padrão */
+        background-repeat: repeat;
+        background-size: 300px; /* Ajuste este valor para aumentar ou diminuir as folhas */
+
+        /* Adiciona uma camada branca semi-transparente para destacar o texto */
+        background-color: rgba(233, 236, 239, 0.85);
+        background-blend-mode: overlay;
+
+        padding: 80px 0;
+        border-bottom: 5px solid #0d6efd;
+        }
+
+        /* Mantendo os outros estilos que já tínhamos */
         .icon-card { transition: transform 0.3s; cursor: pointer; text-decoration: none; color: inherit; }
         .icon-card:hover { transform: scale(1.05); }
         .icon-img { width: 80px; height: 80px; object-fit: contain; }
@@ -55,7 +70,7 @@
             </div>
 
             <div class="col-md-4">
-                <a href="/busca?tipo=Eletrodomesticos" class="icon-card">
+                <a href="/busca?tipo=Eletrodomésticos" class="icon-card">
                     <div class="card h-100 shadow-sm border-0 text-center p-4">
                         <img src="{{ url_for('static', filename='img/eletrodomesticos.png') }}" class="icon-img mx-auto mb-3" alt="Eletrodomesticos">
                         <h5 class="card-title">Eletrodomésticos</h5>
