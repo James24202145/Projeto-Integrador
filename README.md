@@ -13,12 +13,22 @@ Facilitar o acesso a locais adequados para o descarte de inservíveis.
 - SQLAlchemy (SQLite)
 - Bootstrap
 
-## 🏁 Como Iniciar
+## 🏁 Como Iniciar no Linux
 
 1.  `git clone https://github.com/James24202145/Projeto-Integrador.git`
-2.  `python -m venv venv`
-3.  `pip install -r requirements.txt`
-4.  `python app.py`
+2.  `cd Projeto-Integrador`
+3.  `python -m venv .venv`
+4.  `source .venv/bin/activate`
+5.  `pip install -r requirements.txt`
+6.  `python app.py`
+
+## 🏁 Como Iniciar no Windows (PowerShell)
+1. git clone https://github.com/James24202145/Projeto-Integrador.git
+2. cd Projeto-Integrador
+3. python -m venv .venv
+4. .\.venv\Scripts\Activate.ps1
+5. pip install -r requirements.txt
+6. python app.py
 
 ## 👥 Integrantes
 
