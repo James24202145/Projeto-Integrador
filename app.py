@@ -4,10 +4,11 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import or_
 
 app = Flask(__name__)
-
-# Configuração inteligente do caminho do banco de dados
+# Isso garante que o Python encontre o banco em qualquer servidor
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'projeto.db')
+db_path = os.path.join(basedir, 'instance', 'projeto.db')
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + db_path
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
