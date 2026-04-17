@@ -60,7 +60,7 @@ def busca():
         # 1. Verifica se o usuário digitou algo que comece com número (provável CEP)
         if busca_texto[0].isdigit():
             apenas_numeros = "".join(filter(str.isdigit, busca_texto))
-            prefixo_cep = apenas_numeros[:3]
+            prefixo_cep = apenas_numeros[:4]
 
             # Busca prioritária por CEP
             query = query.filter(PontoColeta.cep.like(f"{prefixo_cep}%"))
@@ -73,7 +73,7 @@ def busca():
                     PontoColeta.cidade.ilike(f"%{busca_texto}%")
                 )
             )
-    resultados = query.limit(21).all()
+    resultados = query.limit(90).all()
     return render_template('busca.html', resultados=resultados)
 
 @app.route('/importancia')
