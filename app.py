@@ -73,7 +73,7 @@ def busca():
                     PontoColeta.cidade.ilike(f"%{busca_texto}%")
                 )
             )
-    resultados = query.all()
+    resultados = query.limit(21).all()
     return render_template('busca.html', resultados=resultados)
 
 @app.route('/importancia')
